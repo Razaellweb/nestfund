@@ -1,90 +1,65 @@
-import { ArrowUpRightIcon } from "@heroicons/react/24/outline";
+import { Target, Calendar, LineChart, PiggyBank, Wallet, LayoutDashboard } from "lucide-react";
 import React from "react";
+
+const items = [
+  {
+    title: "Goal-based savings",
+    desc: "Create multiple goals (rent, travel, emergency) and fund them automatically.",
+    icon: Target,
+  },
+  {
+    title: "Automated deposits",
+    desc: "Set daily, weekly or monthly autosave to match your salary cycle.",
+    icon: Calendar,
+  },
+  {
+    title: "Investment options",
+    desc: "Access low-to-medium risk products with clear projections.",
+    icon: LineChart,
+  },
+  {
+    title: "Interest earnings",
+    desc: "Earn competitive returns with transparent fees.",
+    icon: PiggyBank,
+  },
+  {
+    title: "Flexible withdrawals",
+    desc: "Withdraw to your bank securely when you need it.",
+    icon: Wallet,
+  },
+  {
+    title: "Simple dashboard",
+    desc: "Track all goals and investments in real time.",
+    icon: LayoutDashboard,
+  },
+];
 
 const Features = () => {
   return (
-    <div className="w-full mt-[4rem] md:mt-[6rem]">
-      <div className="w-[97%] mx-auto md:mx-0 md:w-[68%] left-0">
-        <h1 className="text-3xl md:text-4xl xl:text-5xl text-center md:text-left pt-4">
-          Our <span className="text-[#CAFF33]">Features </span>
-        </h1>
-        <h1 className="text-base pt-3.5 text-[#B3B3B3] text-center md:text-left">
-          Experience a host of powerful features at GeekPay, including seamless online banking, secure transactions, and personalized financial insights, all designed to enhance your banking experience
-        </h1>
+    <section id="features" className="w-full mt-16 md:mt-24">
+      <div className="w-[97%] mx-auto md:mx-0 md:w-[68%]">
+        <h2 className="text-3xl md:text-4xl xl:text-5xl text-center md:text-left pt-4">
+          Built to help you <span className="text-emerald-400">save and grow</span>
+        </h2>
+        <p className="text-base pt-3.5 text-slate-300 text-center md:text-left">
+          Everything you need to build a stronger financial future—automatically.
+        </p>
       </div>
 
-      <div className="mt-[3.5rem] w-full flex items-start justify-between flex-wrap">
-        <div className="w-[97%] mx-auto xl:mx-0 md:w-[23%] 2xl:w-[17.5%] bg-[#1C1C1C] rounded-[1rem] py-6 md:py-11 pl-6 md:pl-11 md:pr-11">
-          <div className="flex gap-4 md:gap-0 overflow-x-scroll md:overflow-x-hidden md:flex-col md:space-y-5">
-            <div className="w-fit md:w-full whitespace-nowrap rounded-full py-3 px-5 bg-[#1A1A1A] text-base cursor-pointer text-[#CAFF33] border border-[#262626]">
-              Online Banking
+      <div className="mt-10 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-5">
+        {items.map(({ title, desc, icon: Icon }) => (
+          <div key={title} className="rounded-2xl bg-[#111827] border border-slate-800/60 p-6 hover:translate-y-[-2px] hover:shadow-[0_10px_30px_rgba(0,0,0,.25)] transition">
+            <div className="flex items-center gap-3">
+              <span className="inline-flex h-10 w-10 items-center justify-center rounded-full bg-emerald-400/10 ring-1 ring-emerald-400/30">
+                <Icon className="h-5 w-5 text-emerald-400" />
+              </span>
+              <h3 className="text-xl font-semibold">{title}</h3>
             </div>
-
-            <div className="w-fit md:w-full whitespace-nowrap rounded-full py-3 px-5 text-base cursor-pointer border border-[#262626]">
-              Financial Tools
-            </div>
-
-            <div className="w-fit md:w-full whitespace-nowrap rounded-full py-3 px-5 text-base cursor-pointer border border-[#262626]">
-              Customer Support
-            </div>
+            <p className="text-slate-300 mt-3">{desc}</p>
           </div>
-        </div>
-
-        <div className="w-[97%] mx-auto md:mx-0 md:w-[75%] 2xl:w-[79%] mt-4 md:mt-0 flex items-center justify-between flex-wrap">
-          <div className="w-[97%] mx-auto md:mx-0 md:w-[49%] 2xl:w-[48%] mt-[4.5%] md:mt-0 bg-[#1C1C1C] rounded-[1rem] px-8 py-11 md:px-11 md:py-14 2xl:py-11 border border-[#262626]">
-            <h1 className="text-xl w-full flex items-center justify-between text-white">
-              24/7 Account Access
-              <span className="text-[#CAFF33]">
-                <ArrowUpRightIcon className="w-6 h-6" />
-              </span>
-            </h1>
-
-            <h1 className="text-base pt-4.5 text-[#B3B3B3]">
-              Enjoy the convenience of accessing your accounts anytime, anywhere through our secure online banking platform. Check balances, transfer funds, and pay bills with ease.
-            </h1>
-          </div>
-
-          <div className="w-[97%] mx-auto md:mx-0 md:w-[49%] 2xl:w-[48%] mt-[4.5%] md:mt-0 bg-[#1C1C1C] rounded-[1rem] px-8 py-11 md:px-11 md:py-14 2xl:py-11 border border-[#262626]">
-            <h1 className="text-xl w-full flex items-center justify-between text-white">
-              Mobile Banking App
-              <span className="text-[#CAFF33]">
-                <ArrowUpRightIcon className="w-6 h-6" />
-              </span>
-            </h1>
-
-            <h1 className="text-base pt-4.5 text-[#B3B3B3]">
-              Stay connected to your finances on the go with our user-friendly mobile banking app. Easily manage your accounts, deposit checks, and make payments from your smartphone or tablet.
-            </h1>
-          </div>
-
-          <div className="w-[97%] mx-auto md:mx-0 md:w-[49%] 2xl:w-[48%] mt-[4.5%] md:mt-[2%] 2xl:mt-[4%] bg-[#1C1C1C] rounded-[1rem] px-8 py-8 md:px-11 md:py-11 border border-[#262626]">
-            <h1 className="text-xl w-full flex items-center justify-between text-white">
-              Secure Transactions
-              <span className="text-[#CAFF33]">
-                <ArrowUpRightIcon className="w-6 h-6" />
-              </span>
-            </h1>
-
-            <h1 className="text-base pt-4.5 text-[#B3B3B3]">
-              Rest assured knowing that your transactions are protected by industry-leading security measures. We employ encryption and multi-factor authentication to safeguard your financial information.
-            </h1>
-          </div>
-
-          <div className="w-[97%] mx-auto md:mx-0 md:w-[49%] 2xl:w-[48%] mt-[4.5%] md:mt-[2%] 2xl:mt-[4%] bg-[#1C1C1C] rounded-[1rem] px-8 py-11 md:px-11 md:py-14 2xl:py-11 border border-[#262626]">
-            <h1 className="text-xl w-full flex items-center justify-between text-white">
-              Bill Pay and Transfers
-              <span className="text-[#CAFF33]">
-                <ArrowUpRightIcon className="w-6 h-6" />
-              </span>
-            </h1>
-
-            <h1 className="text-base pt-4.5 text-[#B3B3B3]">
-              Save time and avoid late fees with our convenient bill pay service. Set up recurring payments or make one-time transfers between your accounts with just a few clicks.
-            </h1>
-          </div>
-        </div>
+        ))}
       </div>
-    </div>
+    </section>
   );
 };
 

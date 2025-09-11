@@ -1,7 +1,15 @@
 @import "tailwindcss";
 
-/* globals.css or Testimonials.module.css */
+/* Keep center-card emphasis for testimonials if slick is ever used */
 .slick-center article {
   opacity: 1 !important;
   transform: scale(1) !important;
 }
+
+:root{
+  color-scheme: dark;
+}
+
+*{scroll-behavior:smooth}
+
+::selection{background:#10b98133}

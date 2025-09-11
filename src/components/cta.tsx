@@ -1,31 +1,23 @@
 import React from 'react'
 import Link from "next/link";
 
-
 const CTA = () => {
   return (
-    <div className=" mt-[7rem] w-[97%] mx-auto md:mx-0 md:w-full bg-[#1c1c1c] py-[3rem] relative border border-[#262626] rounded-[1rem]">
-        <img
-            src="/Abstract-Design-2.png"
-            alt=""
-            className="absolute top-0 left-0 z-0"
-          />
-        <div className="w-[86%] md:w-[90%] mx-auto flex items-center flex-wrap justify-between">
-        <div className="w-[96%] md:w-[67%] left-0">
-          <h1 className="text-3xl md:text-3xl xl:text-4xl text-center md:text-left">
-            Start your financial journey with <span className="text-[#CAFF33]">GeekPay today! </span>
-          </h1>
-          <h1 className="text-base pt-3.5 text-[#B3B3B3] text-center md:text-left">
-            Ready to take control of your finances? Join GeekPay now, and let us help you achieve your financial goals with our tailored solutions and exceptional customer service
-          </h1>
+    <section className="mt-24 w-full bg-[#0b1220]/60 py-10 relative border border-slate-800/60 rounded-2xl">
+      <div className="w-[90%] mx-auto flex items-center flex-wrap justify-between gap-6">
+        <div className="w-[96%] md:w-[67%]">
+          <h2 className="text-3xl md:text-4xl text-center md:text-left">
+            Start your wealth journey with <span className="text-emerald-400">NestFund</span>
+          </h2>
+          <p className="text-base pt-3.5 text-slate-300 text-center md:text-left">
+            Open a free account in minutes. Set goals, automate savings and grow with confidence.
+          </p>
         </div>
-        <div className="w-fit right-0 mt-4 md:mt-0 mx-auto md:mx-0">
-          <Link href="/signup">
-          <button className='px-7 py-3 rounded-full bg-[#CAFF33] text-black text-xl cursor-pointer mt-[2rem]'>Open Account</button>
-          </Link>
+        <div className="w-fit mx-auto md:mx-0">
+          <Link href="/signup" className='px-7 py-3 rounded-full bg-emerald-400 text-slate-900 text-lg font-medium hover:bg-emerald-300 transition-colors'>Create Free Account</Link>
         </div>
       </div>
-      </div>
+    </section>
   )
 }
 
