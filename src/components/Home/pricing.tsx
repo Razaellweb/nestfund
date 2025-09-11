@@ -1,5 +1,6 @@
 import { CheckCircle } from "lucide-react";
 import React from "react";
+import Link from "next/link";
 
 const tiers = [
   {
@@ -69,9 +70,17 @@ const Pricing = () => {
                 </li>
               ))}
             </ul>
-            <a href="/" className={`mt-6 inline-flex w-full items-center justify-center rounded-full px-5 py-2.5 text-base font-medium transition-colors ${t.highlight ? "bg-emerald-400 text-slate-900 hover:bg-emerald-300" : "border border-slate-700 hover:bg-slate-800/60"}`}>
-              {t.name === "Starter" ? "Create Free Account" : "Get Started"}
-            </a>
+<Link
+  href="/"
+  className={`mt-6 inline-flex w-full items-center justify-center rounded-full px-5 py-2.5 text-base font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-emerald-400 ${
+    t.highlight
+      ? "bg-emerald-400 text-slate-900 hover:bg-emerald-300"
+      : "border border-slate-700 text-slate-200 hover:bg-slate-800/60"
+  }`}
+>
+  {t.name === "Starter" ? "Create Free Account" : "Get Started"}
+</Link>
+
           </div>
         ))}
       </div>
