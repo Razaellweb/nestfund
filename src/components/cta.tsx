@@ -14,7 +14,7 @@ const CTA = () => {
           </p>
         </div>
         <div className="w-fit mx-auto md:mx-0">
-          <Link href="/signup" className='px-7 py-3 rounded-full bg-emerald-400 text-slate-900 text-lg font-medium hover:bg-emerald-300 transition-colors'>Create Free Account</Link>
+          <Link href="/" className='px-7 py-3 rounded-full bg-emerald-400 text-slate-900 text-lg font-medium hover:bg-emerald-300 transition-colors'>Create Free Account</Link>
         </div>
       </div>
     </section>
