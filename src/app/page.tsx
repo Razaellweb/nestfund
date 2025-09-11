@@ -27,7 +27,7 @@ export default function Home() {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 mt-7 justify-center md:justify-start">
-            <Link href="/signup" className="inline-flex items-center justify-center rounded-full bg-emerald-400 text-slate-900 px-6 py-3 text-lg font-medium hover:bg-emerald-300 transition-colors">
+            <Link href="/" className="inline-flex items-center justify-center rounded-full bg-emerald-400 text-slate-900 px-6 py-3 text-lg font-medium hover:bg-emerald-300 transition-colors">
               Create Free Account
             </Link>
             <a href="#features" className="inline-flex items-center justify-center rounded-full border border-slate-700 px-6 py-3 text-lg text-slate-200 hover:bg-slate-800/60 transition-colors">
