@@ -14,7 +14,7 @@ const Navbar = () => {
     { href: "/", label: "Home" },
     { href: "#features", label: "Features" },
     { href: "#pricing", label: "Pricing" },
-    { href: "/security", label: "Security" },
+    { href: "", label: "Security" },
     { href: "#faq", label: "FAQs" },
     { href: "#contact", label: "Contact" },
   ];
@@ -55,10 +55,10 @@ const Navbar = () => {
           </nav>
 
           <div className="flex items-center gap-4">
-            <Link href="/signin" className="text-base px-5 py-2 rounded-full border border-slate-700 hover:bg-slate-800/60 transition-colors">
+            <Link href="/" className="text-base px-5 py-2 rounded-full border border-slate-700 hover:bg-slate-800/60 transition-colors">
               Login
             </Link>
-            <Link href="/signup" className="px-6 py-2.5 rounded-full bg-emerald-400 text-slate-900 text-base font-medium hover:bg-emerald-300 transition-colors">
+            <Link href="/" className="px-6 py-2.5 rounded-full bg-emerald-400 text-slate-900 text-base font-medium hover:bg-emerald-300 transition-colors">
               Create Free Account
             </Link>
           </div>
@@ -117,10 +117,10 @@ const Navbar = () => {
           ))}
 
           <hr className="border-slate-700 my-4" />
-          <Link href="/signin" onClick={() => setMenuOpen(false)} className="text-base">
+          <Link href="/" onClick={() => setMenuOpen(false)} className="text-base">
             Login
           </Link>
-          <Link href="/signup" onClick={() => setMenuOpen(false)} className="w-full text-center py-3 rounded-full bg-emerald-400 text-slate-900 text-base font-medium mt-2">
+          <Link href="/" onClick={() => setMenuOpen(false)} className="w-full text-center py-3 rounded-full bg-emerald-400 text-slate-900 text-base font-medium mt-2">
             Create Free Account
           </Link>
         </div>
