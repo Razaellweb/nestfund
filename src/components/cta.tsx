@@ -11,7 +11,7 @@ const CTA = () => {
           </h2>
           <p className="text-base pt-3.5 text-slate-300 text-center md:text-left">
             Open a free account in minutes. Set goals, automate savings and grow with confidence.
-          </p>
+          </p> 
         </div>
         <div className="w-fit mx-auto md:mx-0">
           <Link href="/" className='px-7 py-3 rounded-full bg-emerald-400 text-slate-900 text-lg font-medium hover:bg-emerald-300 transition-colors'>Create Free Account</Link>
